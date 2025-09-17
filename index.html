@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suleiman Contact - Islamic Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #00897B;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .whatsapp-links a {
+      display: block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .whatsapp-links a:hover {
+      opacity: 0.9;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #00897B;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00695C;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Suleiman Alhassan</h1>
+    <p>Get in touch with me directly on WhatsApp 📲</p>
+  </header>
+
+  <div class="container">
+    <h2>Quick WhatsApp Chat</h2>
+    <div class="whatsapp-links">
+      <a href="https://wa.me/233599931348?text=Hello%20Suleiman%2C%20I%E2%80%99m%20contacting%20you%20from%20your%20website." target="_blank">
+        Chat on WhatsApp (0599931348)
+      </a>
+      <a href="https://wa.me/233248503631?text=Hello%20Suleiman%2C%20I%E2%80%99m%20contacting%20you%20from%20your%20website." target="_blank">
+        Chat on WhatsApp (0248503631)
+      </a>
+    </div>
+
+    <h2>Send me a message</h2>
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required><br>
+      <textarea id="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      let name = document.getElementById("name").value;
+      let msg = document.getElementById("message").value;
+      let phone = "233599931348"; // main number
+
+      let url = "https://wa.me/" + phone + "?text=" 
+        + "Hello Suleiman, I’m contacting you from your website.%0A"
+        + "Name: " + name + "%0A"
+        + "Message: " + msg;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
